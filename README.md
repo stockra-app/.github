@@ -1,2 +1,0 @@
-# .github
-Stockra organization profile
