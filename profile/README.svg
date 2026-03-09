@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="860" viewBox="0 0 960 860">
+  <defs>
+    <linearGradient id="bg_gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#111113"/>
+      <stop offset="100%" style="stop-color:#0d0d0d"/>
+    </linearGradient>
+
+    <radialGradient id="wordmark_glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4e9e6e;stop-opacity:0.12"/>
+      <stop offset="55%" style="stop-color:#4e9e6e;stop-opacity:0.04"/>
+      <stop offset="100%" style="stop-color:#4e9e6e;stop-opacity:0"/>
+    </radialGradient>
+
+    <linearGradient id="accent_line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4e9e6e;stop-opacity:0"/>
+      <stop offset="30%" style="stop-color:#4e9e6e;stop-opacity:1"/>
+      <stop offset="70%" style="stop-color:#4e9e6e;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#4e9e6e;stop-opacity:0"/>
+    </linearGradient>
+
+    <linearGradient id="surface_fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#161618;stop-opacity:0"/>
+      <stop offset="6%" style="stop-color:#161618;stop-opacity:1"/>
+      <stop offset="94%" style="stop-color:#161618;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#161618;stop-opacity:0"/>
+    </linearGradient>
+
+    <filter id="subtle_glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Clip for table card only — no footer row inside -->
+    <clipPath id="card_clip">
+      <rect x="80" y="422" width="800" height="372" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect width="960" height="860" fill="url(#bg_gradient)"/>
+
+  <!-- ══ HEADER ══════════════════════════════════════════════ -->
+  <ellipse cx="480" cy="138" rx="340" ry="120" fill="url(#wordmark_glow)"/>
+
+  <text x="480" y="158" text-anchor="middle"
+    font-family="'SF Pro Display','Helvetica Neue',Helvetica,Arial,sans-serif"
+    font-size="86" font-weight="600" letter-spacing="-4"
+    fill="#f2f2f0" filter="url(#subtle_glow)">Stockra</text>
+
+  <text x="480" y="202" text-anchor="middle"
+    font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif"
+    font-size="15" font-weight="300" letter-spacing="3.5" fill="#8a8a8e">MODULAR ERP · BUILT WITH FLUTTER</text>
+
+  <rect x="420" y="226" width="120" height="1" fill="url(#accent_line)" rx="0.5"/>
+
+  <!-- ══ COPY ════════════════════════════════════════════════ -->
+  <text x="480" y="270" text-anchor="middle"
+    font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif"
+    font-size="17" font-weight="400" letter-spacing="-0.2" fill="#8a8a8e">One app. Every tool your business needs.</text>
+
+  <!-- ══ STACK — 5 chips, total width=560, centered at x=480 ═ -->
+  <!-- chip width=100, gap=12 → total=(5×100)+(4×12)=548 → start x=(960-548)/2=206 -->
+  <text x="480" y="318" text-anchor="middle"
+    font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif"
+    font-size="11" font-weight="400" letter-spacing="2.5" fill="#4e9e6e">STACK</text>
+
+  <rect x="206" y="331" width="100" height="28" rx="14" fill="#161618" stroke="#2a2a2d" stroke-width="1"/>
+  <text x="256" y="349" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" fill="#f2f2f0">Flutter</text>
+
+  <rect x="318" y="331" width="100" height="28" rx="14" fill="#161618" stroke="#2a2a2d" stroke-width="1"/>
+  <text x="368" y="349" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" fill="#f2f2f0">Supabase</text>
+
+  <rect x="430" y="331" width="100" height="28" rx="14" fill="#161618" stroke="#2a2a2d" stroke-width="1"/>
+  <text x="480" y="349" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" fill="#f2f2f0">Stripe</text>
+
+  <rect x="542" y="331" width="100" height="28" rx="14" fill="#161618" stroke="#2a2a2d" stroke-width="1"/>
+  <text x="592" y="349" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" fill="#f2f2f0">Firebase</text>
+
+  <rect x="654" y="331" width="100" height="28" rx="14" fill="#161618" stroke="#2a2a2d" stroke-width="1"/>
+  <text x="704" y="349" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" fill="#f2f2f0">Resend</text>
+
+  <!-- ══ ROADMAP TABLE ════════════════════════════════════════ -->
+  <text x="480" y="406" text-anchor="middle"
+    font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif"
+    font-size="11" font-weight="400" letter-spacing="2.5" fill="#4e9e6e">ROADMAP</text>
+
+  <!-- Table card — 5 rows × 62px + header 48px = 358px, ends at y=780 -->
+  <rect x="80" y="422" width="800" height="372" rx="16" fill="url(#surface_fade)" stroke="#2a2a2d" stroke-width="1"/>
+
+  <g clip-path="url(#card_clip)">
+    <!-- Vertical separators -->
+    <line x1="200" y1="422" x2="200" y2="794" stroke="#2a2a2d" stroke-width="0.75"/>
+    <line x1="380" y1="422" x2="380" y2="794" stroke="#2a2a2d" stroke-width="0.75"/>
+    <!-- Horizontal separators -->
+    <line x1="80" y1="470" x2="880" y2="470" stroke="#2a2a2d" stroke-width="0.75"/>
+    <line x1="80" y1="532" x2="880" y2="532" stroke="#2a2a2d" stroke-width="0.75"/>
+    <line x1="80" y1="594" x2="880" y2="594" stroke="#2a2a2d" stroke-width="0.75"/>
+    <line x1="80" y1="656" x2="880" y2="656" stroke="#2a2a2d" stroke-width="0.75"/>
+    <line x1="80" y1="718" x2="880" y2="718" stroke="#2a2a2d" stroke-width="0.75"/>
+    <!-- Phase 1 active highlight -->
+    <rect x="80" y="470" width="800" height="62" fill="#4e9e6e" opacity="0.05"/>
+    <rect x="80" y="470" width="3" height="62" fill="#4e9e6e"/>
+  </g>
+
+  <!-- Column headers -->
+  <text x="140" y="451" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="500" letter-spacing="1.5" fill="#4e9e6e">PHASE</text>
+  <text x="290" y="451" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="500" letter-spacing="1.5" fill="#4e9e6e">NAME</text>
+  <text x="630" y="451" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="500" letter-spacing="1.5" fill="#4e9e6e">MODULES</text>
+
+  <!-- Phase 1 -->
+  <text x="140" y="507" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#4e9e6e">1</text>
+  <text x="290" y="500" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#f2f2f0">Core</text>
+  <text x="290" y="518" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="300" fill="#4e9e6e" letter-spacing="0.5">In development</text>
+  <text x="630" y="507" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="300" fill="#8a8a8e">Inventory · Sales · POS · Logistics</text>
+
+  <!-- Phase 2 -->
+  <text x="140" y="569" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#3a3a3e">2</text>
+  <text x="290" y="562" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#f2f2f0">Expansion</text>
+  <text x="290" y="580" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="300" fill="#8a8a8e" letter-spacing="0.5">Planned</text>
+  <text x="630" y="569" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="300" fill="#8a8a8e">Purchases · Online Store</text>
+
+  <!-- Phase 3 -->
+  <text x="140" y="631" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#3a3a3e">3</text>
+  <text x="290" y="624" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#f2f2f0">Accounting</text>
+  <text x="290" y="642" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="300" fill="#8a8a8e" letter-spacing="0.5">Planned</text>
+  <text x="630" y="631" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="300" fill="#8a8a8e">Billing (CFDI 4.0) · HR</text>
+
+  <!-- Phase 4 -->
+  <text x="140" y="693" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#3a3a3e">4</text>
+  <text x="290" y="686" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#f2f2f0">Shipping</text>
+  <text x="290" y="704" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="300" fill="#8a8a8e" letter-spacing="0.5">Planned</text>
+  <text x="630" y="693" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="300" fill="#8a8a8e">External carrier integrations</text>
+
+  <!-- Phase 5 -->
+  <text x="140" y="750" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#3a3a3e">5</text>
+  <text x="290" y="743" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#f2f2f0">Big Data</text>
+  <text x="290" y="761" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="300" fill="#8a8a8e" letter-spacing="0.5">Planned</text>
+  <text x="630" y="750" text-anchor="middle" font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="300" fill="#8a8a8e">Analytics</text>
+
+  <!-- ══ LINKS — 3 chips, centered, below table ══════════════ -->
+  <!-- chip width=160, gap=16 → total=(3×160)+(2×16)=512 → start x=(960-512)/2=224 -->
+
+  <!-- stockra.app — accent chip -->
+  <rect x="224" y="812" width="160" height="30" rx="15" fill="#161618" stroke="#4e9e6e" stroke-width="1"/>
+  <text x="304" y="831" text-anchor="middle"
+    font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif"
+    font-size="12" font-weight="400" letter-spacing="0.3" fill="#4e9e6e">stockra.app</text>
+
+  <!-- app.stockra.app -->
+  <rect x="400" y="812" width="160" height="30" rx="15" fill="#161618" stroke="#2a2a2d" stroke-width="1"/>
+  <text x="480" y="831" text-anchor="middle"
+    font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif"
+    font-size="12" font-weight="400" letter-spacing="0.3" fill="#8a8a8e">app.stockra.app</text>
+
+  <!-- dev@stockra.app -->
+  <rect x="576" y="812" width="160" height="30" rx="15" fill="#161618" stroke="#2a2a2d" stroke-width="1"/>
+  <text x="656" y="831" text-anchor="middle"
+    font-family="'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif"
+    font-size="12" font-weight="400" letter-spacing="0.3" fill="#8a8a8e">dev@stockra.app</text>
+
+</svg>
